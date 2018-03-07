@@ -347,6 +347,12 @@ nc_asin@c@(@ctype@ *x, @ctype@ *r)
     return;
 }
 
+static void
+nc_acrd@c@(@ctype@ *x, @ctype@ *r)
+{
+    *r = 2 * npy_casin@c@(*x / 2);
+    return;
+}
 
 static void
 nc_asinh@c@(@ctype@ *x, @ctype@ *r)
@@ -405,6 +411,13 @@ static void
 nc_sin@c@(@ctype@ *x, @ctype@ *r)
 {
     *r = npy_csin@c@(*x);
+    return;
+}
+
+static void
+nc_crd@c@(@ctype@ *x, @ctype@ *r)
+{
+    *r = 2 * npy_csin@c@(*x / 2);
     return;
 }
 
